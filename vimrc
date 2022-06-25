@@ -37,7 +37,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-
+map <F5> :wall!<CR>:!sbcl --load foo.cl<CR><CR>
 set list
 set scrolloff=5
 set tw=0
@@ -161,6 +161,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
+
 color snazzy
 let g:SnazzyTransparent = 1
 
@@ -202,13 +203,12 @@ map <down> :res -5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
-map tu :tabe<CR>
+map tu :tab<CR>
 map th :-tabnext<CR>
 map tl :+tabnext<CR>
 
 map sv <C-w>t<C-w>H
 map sh <C-w>t<C-w>K
-
 let g:coc_global_extensions = ['coc-json', 'coc-vimlsp']
 inoremap hh <Esc>
 
@@ -218,7 +218,7 @@ set hidden
 set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
-set shortmess
+set shortmess=a
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
